@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TravelAI Design System - Modern Travel & AI Theme */
+
+@layer base {
+  :root {
+    /* Core Travel Blue Theme */
+    --background: 220 15% 97%;
+    --foreground: 220 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
+
+    /* Travel Blue Primary */
+    --primary: 212 95% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 212 95% 48%;
+    
+    /* Ocean Secondary */
+    --secondary: 199 89% 48%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Soft Backgrounds */
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 199 89% 92%;
+    --accent-foreground: 220 25% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 212 95% 54%;
+
+    /* Chat specific colors */
+    --chat-user-bg: 212 95% 54%;
+    --chat-user-text: 0 0% 100%;
+    --chat-ai-bg: 220 13% 95%;
+    --chat-ai-text: 220 25% 15%;
+    
+    /* Hotel card colors */
+    --hotel-price: 142 76% 36%;
+    --hotel-rating: 45 93% 47%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(212 95% 54%), hsl(199 89% 48%));
+    --gradient-hero: linear-gradient(135deg, hsl(212 95% 54% / 0.1), hsl(199 89% 48% / 0.05));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 15% 98%));
+
+    /* Shadows & Effects */
+    --shadow-chat: 0 4px 20px hsl(212 95% 54% / 0.1);
+    --shadow-card: 0 2px 10px hsl(220 25% 15% / 0.05);
+    --shadow-hotel: 0 8px 25px hsl(220 25% 15% / 0.08);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode for travel theme */
+    --background: 220 27% 8%;
+    --foreground: 220 15% 92%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 220 15% 92%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 220 15% 92%;
+
+    --primary: 212 95% 60%;
+    --primary-foreground: 220 27% 8%;
+
+    --secondary: 199 89% 55%;
+    --secondary-foreground: 220 27% 8%;
+
+    --muted: 220 25% 15%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 199 89% 20%;
+    --accent-foreground: 220 15% 92%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 220 15% 92%;
+
+    --border: 220 25% 18%;
+    --input: 220 25% 18%;
+    --ring: 212 95% 60%;
+
+    /* Dark mode chat colors */
+    --chat-user-bg: 212 95% 60%;
+    --chat-user-text: 220 27% 8%;
+    --chat-ai-bg: 220 25% 18%;
+    --chat-ai-text: 220 15% 92%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Custom scrollbar for chat */
+  .chat-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .chat-scroll::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 2px;
+  }
+
+  .chat-scroll::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 2px;
+  }
+
+  .chat-scroll::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.5);
+  }
+}
